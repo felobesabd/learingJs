@@ -46,6 +46,11 @@ function addActive() {
     // Add Class Active To Images
     sliderImages[currentSlide - 1].classList.add('active')
 }
+
+
+
+
+
 // console.log(eleCreateUl.children);
 
 
