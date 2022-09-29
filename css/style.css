@@ -127,11 +127,16 @@ body {
     overflow: hidden;
 }
 .info-container .name {
-    width: 50%;
+    width: 33.33%;
     float: left;
 }
+.info-container .countdown {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+}
 .info-container .tries {
-    width: 50%;
+    width: 33.333%;
     float: right;
     text-align: right;
 }

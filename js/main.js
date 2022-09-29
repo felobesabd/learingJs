@@ -104,6 +104,7 @@ document.querySelector('h3').onclick = function () {
     document.querySelector('.start-game').remove()
     show()
     document.getElementById('music-game').play()
+    timer()
 }
 var felo = document.querySelectorAll('.games')
 function show() {
@@ -193,6 +194,32 @@ function shuffle(array) {
     }
     return array;
 }
+// var ourCountDown = setInterval(function () {
+//     var counter = parseInt($('.countdown').html())
+//     if (counter !== 0) {
+//         $('.countdown').html(counter - 1)
+//     } else {
+//         clearInterval(ourCountDown)
+//         $('.countdown').html('Finished')
+//     }
+// }, 1000)
+var ourCountDown = document.querySelector('.countdown span')
+// console.log(ourCountDown.innerHTML)
+function timer() {
+    var ourTimer = setInterval(function () {
+        var counter = parseInt(ourCountDown.innerHTML)
+        if (counter !== 0) {
+            ourCountDown.innerHTML = counter - 1
+        } else {
+            clearInterval(ourTimer)
+            ourCountDown.innerHTML = 'Finished'
+            felo.forEach(function (e) {
+                e.classList.remove('true')
+            })
+        }
+    }, 1000)
+}
+
 /*                          End Memory Game                       */
 
 
